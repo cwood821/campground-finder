@@ -12,4 +12,4 @@ The application implements a Model-View-Controller pattern,
 with route files approximating typical controller responsibilities.
 
 
-[![Screenshot of Campground Finder](https://raw.githubusercontent.com/cwood821/campground-finder/master/screenshots/camground-finder-1.png)]
+![Screenshot of Campground Finder](https://raw.githubusercontent.com/cwood821/campground-finder/master/screenshots/camground-finder-1.png)
