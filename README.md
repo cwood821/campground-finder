@@ -12,4 +12,4 @@ The application implements a Model-View-Controller pattern,
 with route files approximating typical controller responsibilities.
 
 
-<img src="screenshots/campground-finder-1.png">
+![Screenshot of Campground Finder](/screenshots/campground-finder-1.png?raw=true "Screenshot")
