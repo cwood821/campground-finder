@@ -1,0 +1,13 @@
+<% include partials/header %>
+
+<h1>Meet <%= name %></h1>
+
+<p>The Dog's name is <%= name %></p>
+
+<% if(name.toLowerCase() === "doggo") { %>
+  <p>That's not a real name</p>
+<% } %>
+
+<img src="http://cutepuppypictures.net/wp-content/uploads/2015/10/pomsky-pics-02.jpg">
+
+<% include partials/footer %>

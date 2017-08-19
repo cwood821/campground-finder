@@ -1,0 +1,30 @@
+{
+  "name": "express-app",
+  "version": "0.0.1",
+  "description": "API for Grade.net",
+  "main": "server.js",
+  "repository": "",
+  "author": "Zach Alam <zach@grade.net>",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "connect-flash": "^0.1.1",
+    "ejs": "^2.5.7",
+    "express": "^4.*.*",
+    "express-session": "^1.15.5",
+    "method-override": "^2.3.9",
+    "mongoose": "^4.11.6",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "passport-local-mongoose": "^4.1.0",
+    "request": "^2.81.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  },
+  "engines": {
+    "node": "4.5.0"
+  },
+  "scripts": {
+    "start": "node server.js"
+  }
+}
