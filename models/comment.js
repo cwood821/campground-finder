@@ -1,3 +1,10 @@
+/************************************************************
+
+  Model for a Comment
+
+*************************************************************/
+
+
 var mongoose = require("mongoose");
 
 var commentSchema = mongoose.Schema({

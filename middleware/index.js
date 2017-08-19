@@ -1,10 +1,23 @@
-// All middleware functions go here
+/*
+
+  Holds all custom middleware functions
+
+*/
+
+// Requirements
 var Campground = require("../models/campground.js");
 var Comment = require("../models/comment.js");
 var User = require("../models/user.js");
 
+// The object to export
 var middlewareObj = {};
 
+
+/*
+
+  Middleware functions
+
+*/
 
 middlewareObj.checkCommentOwnership = function(req, res, next) {
   if (! req.isAuthenticated()) {

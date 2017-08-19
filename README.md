@@ -1,5 +1,3 @@
-
-
 # Campground Finder
 Campground Finder is a CRUD application that uses ExpressJS, MongoDB, and PassportJS to handle
 routing, data storage, and authentication respectively.
@@ -12,3 +10,6 @@ routing, data storage, and authentication respectively.
 ## Architecture
 The application implements a Model-View-Controller pattern,
 with route files approximating typical controller responsibilities.
+
+
+<img src="screenshots/campground-finder-1.png">

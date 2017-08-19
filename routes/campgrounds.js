@@ -1,9 +1,11 @@
-/*
+/************************************************************
 
-  Campground routes
+  Campground Routes
 
-*/
+*************************************************************/
 
+
+// Requirements
 var express = require("express");
 var router = express.Router();
 var Campground = require("../models/campground");
@@ -11,7 +13,7 @@ var Commment = require("../models/comment");
 var middleware = require("../middleware/index.js");
 
 
-
+// Show the list of campgrounds
 router.get("/", function(req, res) {
   // Get all campgrounds fron db
   Campground.find({}, function(err, allCampgrounds) {
@@ -26,7 +28,7 @@ router.get("/", function(req, res) {
 });
 
 
-// Edit campground
+// Edit a campground given an id
 router.get("/:id/edit", middleware.checkCampgroundOwnership, function(req, res) {
   Campground.findById(req.params.id, function(err, foundCampground) {
       res.render("campgrounds/edit", {campground: foundCampground});
@@ -34,7 +36,7 @@ router.get("/:id/edit", middleware.checkCampgroundOwnership, function(req, res) 
 });
 
 
-// Edit campground
+// Update a campground given an id
 router.put("/:id", middleware.checkCampgroundOwnership, function(req, res) {
   Campground.findByIdAndUpdate(req.params.id, req.body.campground, function(err, updatedCampground) {
     if (err) {
@@ -46,7 +48,8 @@ router.put("/:id", middleware.checkCampgroundOwnership, function(req, res) {
   });
 });
 
-// Edit campground
+
+// Delete a campground given an id
 router.delete("/:id", middleware.checkCampgroundOwnership, function(req, res) {
   Campground.findByIdAndRemove(req.params.id, function(err, updatedCampground) {
     if (err) {
@@ -58,12 +61,14 @@ router.delete("/:id", middleware.checkCampgroundOwnership, function(req, res) {
   });
 });
 
-// Create a new campground
+
+// Show form to a new campground
 router.get("/new", middleware.isLoggedIn, function(req, res) {
   res.render("campgrounds/new.ejs");
 });
 
 
+// Create a new campground based on posted data
 router.post("/", middleware.isLoggedIn, function(req, res) {
   // Get post data (from form)
   var name = req.body.name;
@@ -93,12 +98,9 @@ router.get("/:id", function(req, res) {
       // errro
     } else {
       res.render("campgrounds/show.ejs", {campground: foundCampground});
-  }
+    }
+  });
 });
-
-});
-
-
 
 
 module.exports = router;
