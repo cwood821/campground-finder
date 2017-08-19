@@ -8,7 +8,7 @@ routing, data storage, and authentication respectively.
 - Users can register, log in and out
 
 ## Architecture
-The application implements a Model-View-Controller pattern,
+The application implements a Model-View-Controller pattern
 with route files approximating typical controller responsibilities.
 
 
